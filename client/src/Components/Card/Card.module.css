@@ -1,0 +1,46 @@
+.card {
+  
+    border: 1px solid rgb(226, 160, 84);
+    border-radius: 10px;
+   margin: 1%;
+   width: 300px; /* Ancho fijo de la carta */
+  height: 420px;
+   flex-basis: calc(33.33% - 20px);
+   background-color: rgba(24, 22, 22, 0.8);
+}
+.card:hover {
+    -webkit-transform:scale(1.1);transform:scale(1.1);
+border-radius: 10%;
+border-color: rgb(151, 149, 241);
+}
+
+
+.image {
+    width: 280px;
+    height: 200px;
+    border: 1px solid rgb(226, 160, 84);
+}
+
+.container {    
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    width: 100%;
+    
+}
+
+.name {
+    color: rgb(226, 160, 84)
+}
+
+.genre {
+    color: rgb(226, 160, 84)
+
+}
+
+.plat {
+    color: aliceblue;
+    
+}
+
+.rating {
+    color: rgb(226, 160, 84)
+}

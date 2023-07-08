@@ -1,0 +1,61 @@
+.Container{
+    background-color: rgba(255, 0, 0, 0.5);
+    position: absolute;
+    padding: 10px;
+    margin: 10px;
+    width: 1300px;
+    font-size: 150%;
+    top: 1%;
+    color: aliceblue;
+    height: 40px;
+}
+
+.home {
+    padding: 5px;
+    margin: 5px;
+    width: 100px;
+    font-size: large;
+    border-radius: 5px;
+    
+    color: #ee9830;
+    text-decoration: none;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    position: absolute;
+    left: 6%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.form {
+    padding: 5px;
+    margin: 5px;
+    width: 100px;
+    font-size: medium;
+    top: 1%;
+    background-color: transparent;
+    color: #ee9830;
+    text-decoration: none;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    position: absolute;
+    left: 12.5%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+.about {
+    padding: 5px;
+    margin: 5px;
+    width: 100px;
+    font-size: large;
+    top: 15%;
+    background-color: transparent;
+    color: #ee9830;
+    text-decoration: none;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    position: absolute;
+    left: 0%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}

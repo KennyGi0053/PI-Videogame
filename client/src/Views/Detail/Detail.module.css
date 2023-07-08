@@ -1,0 +1,93 @@
+.image {
+    width: 400px;
+    height: 400px;
+    margin: -7%;
+    border: 2px solid rgb(10, 152, 247);
+    border-radius:10%;
+}
+
+.h1 {
+    margin: 10%;
+    color: aliceblue;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+.container {
+    text-align: center;
+    background-image: url('../../home\ 4.jpg');
+    
+    
+    background-size: 100% 100%;
+    height: 220vh;
+     background-position: 100%;
+     width: 100%;
+    padding: 1%;
+
+    
+}
+.description {
+ margin: 9%;
+ bottom: 10px;
+    justify-content: center;
+    text-align: center;
+    color: aliceblue;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.description1 {
+    
+    position: relative;
+    bottom: 80px;
+    margin: 100px;
+       justify-content: center;
+       text-align: center;
+       color: aliceblue;
+       font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   }
+.plat {
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+.platforms {
+    text-align: center;
+    margin: -10%;
+    color: aliceblue;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   
+}
+.key {
+    text-align: center;
+}
+
+
+.genres {
+    margin: 13%;
+    color: aliceblue;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+.release {
+    color: aliceblue;
+    margin: -8%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+.rating {
+    color: aliceblue;
+    margin: 12%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+.gen {
+    left: 10%;
+}
+
+.loading {
+    background: url('../../fondoloeader1.jpg');
+     
+}
