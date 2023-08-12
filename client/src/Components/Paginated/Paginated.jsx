@@ -24,20 +24,20 @@ const Paginated = ({videogamesPerPage, allvideogames, paginated, currentPage, se
     return (
         <div className={style.container}>
             
-                <button className={style.prev} onClick={handlePrevPage}
+                <button onClick={handlePrevPage}
                 disabled={currentPage === 1}>Prev</button>
 
             
-            <div>
+            
                 {
                     pageNumbers?.map(number => (
-                        <p className={style.container} key={number}>
-                            <button className={style.butt} onClick={() => paginated(number)}>{number}</button>
-                        </p>
+                         
+                            <button className={style.butt} key={number} onClick={() => paginated(number)}>{number}</button>
+                        
                     ))
                 }
-            </div>
-                <button className={style.next} onClick={handleNextPage}
+            
+                <button  onClick={handleNextPage}
                 disabled={currentPage === totalPages}>Next</button>
             
         </div>

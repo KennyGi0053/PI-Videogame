@@ -1,36 +1,15 @@
 
 .container {
 
-    display: inline-grid;
-  grid-template-columns: auto auto auto auto ;
-  column-gap: 2px;
-  
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 8px;
+    margin-top: 26px;
 }
 
-.pagc {
-    margin: 0.5%;
-    
-
-}
-.butt {
-    color: rgb(226, 160, 84);
-    border-radius: 10%;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    height: 33px;
-    transition: background-color .3s;
-    border: solid 1px;
-    cursor: pointer;
-    background-color: rgba(24, 22, 22, 0.7);
-}
-
-.butt:hover {
-    background: fixed;
-    background-color: aliceblue;
-    color: rgb(68, 66, 66);
-}
-
-.prev {
+.container button {
     color: rgb(226, 160, 84);
     border-radius: 10%;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -38,37 +17,12 @@
     border: solid 1px;
     background-color: rgba(24, 22, 22, 0.7);
     cursor: pointer;
-    height: 34px;
-    width: 50px;
-    margin: 6px;
-    margin-top: 16px;
-    
-    
+    padding: 8px 12px;
+
 }
 
-.prev:hover {
+.container button:hover {
     background: fixed;
     background-color: aliceblue;
     color: rgb(68, 66, 66);
-}
-
-.next {
-    color: rgb(226, 160, 84);
-   
-    border-radius: 10%;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    transition: background-color .3s;
-    border: solid 1px;
-    background-color: rgba(24, 22, 22, 0.7);
-    height: 34px;
-    width: 50px;
-    margin: -1px;
-    margin-top: 15px;
-}
-
-.next:hover {
-    background: fixed;
-    background-color: aliceblue;
-    color: rgb(68, 66, 66);
-    cursor: pointer;
 }

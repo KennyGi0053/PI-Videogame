@@ -5,9 +5,9 @@ const NavBar = () => {
 
     return(
         <div className={style.Container}>
-            <Link className={style.home} to='/home'>Home </Link>
-            <Link className={style.form} to= '/form'>Create VideoGame</Link>
-            <Link className={style.about} to= '/'>About</Link>
+            <Link to= '/'>About</Link>
+            <Link to='/home'>Home </Link>
+            <Link to= '/form'>Create VideoGame</Link>
         </div>
     )
 }

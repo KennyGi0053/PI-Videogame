@@ -91,6 +91,8 @@ return (
     <div className={style.container}>
         <div>
             <SearchBar returnToFirstPage={returnToFirstPage}/>
+            <div className={style.orderContainer}>
+
             <div className={style.azcon}>
 
             <select className={style.az} onChange={event => handleOrderByName(event)} defaultValue='default'>
@@ -108,9 +110,8 @@ return (
             </select>
             </div>
             
-            <div>
-            <button className={style.reset} onClick={handleReset}>Reset Filters</button>
-            </div>
+            
+            
 
             <div className={style.gencon}>
 
@@ -132,6 +133,8 @@ return (
                 <option value="db">Created</option>
                 </select>
             </div>
+            <button className={style.reset} onClick={handleReset}>Reset Filters</button>
+        </div>
 
         </div>
         <Paginated 
@@ -141,31 +144,31 @@ return (
         currentPage={currentPage}
         setCurrentPage={setCurrentPage}
         />
+        
+
+        {/* {allvideogames?.map((video) => (
+            <div key={video.id}>
+            <p>{video.name}</p>
+            <button onClick={() => handleDelete(video.id)}>X</button>
+            </div>
+        ))} */}
+
         <div className={style.card}>
 
         {currentvideogames?.map((cu) => {
             
             return (
                 
-                <div className={style.card1} key={cu.id}>
-                    <Card id={cu.id}name={cu.name} image={cu.image} genres={cu.genres} platforms={cu.platforms} rating={cu.rating} key={cu.id}/>
-                    {/* <button onClick={() => handleDelete(cu.id)}>X</button> */}
-                     </div>
+               
+                    <Card  id={cu.id}name={cu.name} image={cu.image} genres={cu.genres} platforms={cu.platforms} rating={cu.rating} key={cu.id}/>
+                  //  <button onClick={() => handleDelete(cu.id)}>X</button> 
+                     
             )
         })}
         </div>
-        
-
-        {/* {allvideogames?.map((video) => (
-            <div key={video.id}>
-                <p>{video.name}</p>
-                <button onClick={() => handleDelete(video.id)}>X</button>
-            </div>
-        ))} */}
-
+    </div>
 
        
-    </div>
     )
 }
         </div>

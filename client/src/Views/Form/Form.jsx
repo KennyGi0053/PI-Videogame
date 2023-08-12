@@ -8,43 +8,43 @@ const validate = (post) => {
     let errors = {};
   
     if (!post.name) {
-      errors.name = 'Ingresa el nombre del videojuego';
+      errors.name = 'Enter the name of the game';
     } else if (!/^[a-zA-Z\s]+$/.test(post.name)) {
-      errors.name = 'El nombre solo debe contener letras y espacios';
+      errors.name = 'The name must only contain letters and spaces';
     }
   
     if (!post.image) {
-      errors.image = 'Ingresa la URL de una imagen representativa';
+      errors.image = 'Enter the URL of a representative image';
     } else if (!/^(ftp|http|https):\/\/[^ "]+$/.test(post.image)) {
-      errors.image = 'Ingresa una URL válida';
+      errors.image = 'Please enter a valid URL';
     }
   
     if (!post.description) {
-      errors.description = 'Ingresa una descripción';
+      errors.description = 'Enter a description';
     } else if (post.description.length < 10) {
-      errors.description = 'La descripción debe tener al menos 10 caracteres';
+      errors.description = 'Description must be at least 10 characters';
     }
   
     if (!post.platforms) {
-      errors.platforms = 'Ingresa una plataforma';
-    } else if (!/^[a-zA-Z\s]+$/.test(post.platforms)) {
-      errors.platforms = 'La plataforma solo debe contener letras y espacios';
+      errors.platforms = 'Enter a platform';
+    } else if (!/^[a-zA-Z0-9\s]+$/.test(post.platforms)) {
+      errors.platforms = 'The platform must only contain letters, numbers and spaces';
     }
   
     if (!post.releaseDate) {
-      errors.releaseDate = 'Ingresa la fecha de lanzamiento';
+      errors.releaseDate = 'Enter the release date';
     } else if (!/^\d{4}-\d{2}-\d{2}$/.test(post.releaseDate)) {
-      errors.releaseDate = 'Ingresa una fecha válida en formato YYYY-MM-DD';
+      errors.releaseDate = 'Please enter a valid date in YYYY-MM-DD format';
     }
   
     if (!post.rating) {
-      errors.rating = 'Ingresa una calificación';
+      errors.rating = 'Enter a rating';
     } else if (!/^[1-5]$/.test(post.rating)) {
-      errors.rating = 'La calificación debe estar entre 1 y 5';
+      errors.rating = 'The rating must be between 1 and 5';
     }
   
     if (post.genres.length === 0) {
-      errors.genres = 'Selecciona al menos un género';
+      errors.genres = 'Select at least one genre';
     }
   
     return errors;
@@ -97,14 +97,14 @@ const Form = () => {
         const formErrors = validate(post);
         if (Object.keys(formErrors).length > 0) {
           setErrors(formErrors);
-          alert('Por favor, completa todos los campos correctamente');
+          alert('Please fill in all the fields correctly');
           return;
         }
       
         axios
           .post("http://localhost:3001/videogames", post)
           .then((res) => {
-            alert('VideoGame creado exitosamente');
+            alert('VideoGame created successfully');
             setPost({
               name: "",
               image: "",
@@ -116,7 +116,7 @@ const Form = () => {
             });
             setErrors({});
           })
-          .catch((err) => alert('Ocurrió un error al crear el VideoGame'));
+          .catch((err) => alert('An error occurred while creating the VideoGame'));
       };
 
     
@@ -151,52 +151,54 @@ return (
             <Loader background="url('path/to/background-image.jpg')"/>
         ) : ( 
     <div className={style.create}>
-    <form className={style.form} onSubmit={event => handleSubmit(event)}>
+      <div className={style.form}> 
+
+    <form onSubmit={event => handleSubmit(event)}>
    <h1 className={style.h1}>Create VideoGame</h1>
-   <div>
-        <label className={style.label}>Name</label>
-        <input className={style.inputname} type="text" value={post.name} name="name" onChange={event => handleInputChange(event)}/>
+   <div >
+        <label style={style.label}>Name</label>
+        <input  type="text" value={post.name} name="name" onChange={event => handleInputChange(event)}/>
         {errors.name && (
-            <p className={style.errname}>{errors.name}</p>
+            <p className={style.errors}>{errors.name}</p>
         )}
    </div>
 
    <div>
-        <label className={style.labelimage}>Image</label>
-        <input className={style.inputimage} type="url" value={post.image} name='image' onChange={event => handleInputChange(event)} placeholder="Enter image URL"/>
+        <label className={style.label}>Image</label>
+        <input  type="url" value={post.image} name='image' onChange={event => handleInputChange(event)} placeholder="Enter image URL"/>
         {errors.image &&
-        <p className={style.errimage}>{errors.image}</p>
+        <p className={style.errors}>{errors.image}</p>
         }
    </div>
    <div>
 
-        <label className={style.description}>Description</label>
-        <input className={style.inputdescrip} type="text" value={post.description} name='description' onChange={event => handleInputChange(event)} />
+        <label >Description</label>
+        <input  type="text" value={post.description} name='description' onChange={event => handleInputChange(event)} />
         {errors.description &&
-        <p className={style.errdescription}>{errors.description}</p>
+        <p className={style.errors}>{errors.description}</p>
         }
    </div>
 
    <div>
-        <label className={style.platforms}>Platforms</label>
-        <input className={style.inputplat} type="text" value={post.platforms} name='platforms' onChange={event => handleInputChange(event)}/>
+        <label >Platforms</label>
+        <input  type="text" value={post.platforms} name='platforms' onChange={event => handleInputChange(event)}/>
         {errors.platforms && 
-        <p className={style.errplatforms}>{errors.platforms}</p>
+        <p className={style.errors}>{errors.platforms}</p>
         }
    </div>
 
    <div>
-        <label className={style.release}>Release Date</label>
-        <input className={style.inputrel} type="date" value={post.releaseDate} name='releaseDate' onChange={event => handleInputChange(event)}/>
+        <label>Release Date</label>
+        <input className={style.date} type="date" value={post.releaseDate} name='releaseDate' onChange={event => handleInputChange(event)}/>
         {errors.releaseDate && 
-        <p className={style.errrelease}>{errors.releaseDate}</p>
+        <p className={style.errors}>{errors.releaseDate}</p>
         }
    </div>
 
    <div>
    <select className={style.rating} value={post.rating} onChange={event => handleInputChange(event)} name="rating">
    {errors.rating && 
-        <p className={style.errrating}>{errors.rating}</p>}
+        <p className={style.errors}>{errors.rating}</p>}
     <option value="">-- Select a rating --</option>
     <option value="1">1</option>
     <option value="2">2</option>
@@ -211,10 +213,10 @@ return (
     <select className={style.genres} onChange={event => handleSelectGenres(event)} defaultValue='default'>
             <option value='default' disabled>Select Genres</option>
         {genres?.map((genre, index) => (
-            <option value={genre.name} key={index}>{genre.name}</option>
+          <option value={genre.name} key={index}>{genre.name}</option>
         ))}
     </select>
-    {errors.genres && (<p className={style.errgenres}>{errors.genres}</p>)}
+    {errors.genres && (<p className={style.errors}>{errors.genres}</p>)}
     {/* {post.genres.map((index, genre) => 
     <div key={index}>
         <p>{genre}</p>
@@ -230,6 +232,7 @@ return (
     </form>
     
       
+        </div>
     </div>
         )}
 </div>

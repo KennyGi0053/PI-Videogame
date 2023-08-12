@@ -1,16 +1,19 @@
 .Container{
     background-color: rgba(255, 0, 0, 0.5);
-    position: absolute;
+    height: 50px;
     padding: 10px;
-    margin: 10px;
-    width: 1300px;
-    font-size: 150%;
-    top: 1%;
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    font-size: 18px;
+    z-index: 100;
     color: aliceblue;
-    height: 40px;
+    position: absolute;
+    width: 97vw ;
 }
 
-.home {
+.Container a{
     padding: 5px;
     margin: 5px;
     width: 100px;
@@ -21,12 +24,12 @@
     text-decoration: none;
     cursor: pointer;
     transition-duration: 0.4s;
-    position: absolute;
-    left: 6%;
+    
+   
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.form {
+/* .form {
     padding: 5px;
     margin: 5px;
     width: 100px;
@@ -58,4 +61,5 @@
     left: 0%;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
-}
+} */
+

@@ -5,7 +5,7 @@
    margin: 1%;
    width: 300px; /* Ancho fijo de la carta */
   height: 420px;
-   flex-basis: calc(33.33% - 20px);
+  
    background-color: rgba(24, 22, 22, 0.8);
 }
 .card:hover {
@@ -23,7 +23,7 @@ border-color: rgb(151, 149, 241);
 
 .container {    
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    width: 100%;
+    
     
 }
 

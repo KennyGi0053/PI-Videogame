@@ -3,10 +3,23 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
+  background-size: 100% 100%;
+  background-position: 100%;
+  overflow: hidden;
+  width: 100%;
 }
 
 .loader-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-size: 100% 100%;
+  background-position: 100%;
+  overflow: hidden;
+  width: 100vh;
   animation: spin 1s infinite linear;
+  
 }
 
 @keyframes spin {

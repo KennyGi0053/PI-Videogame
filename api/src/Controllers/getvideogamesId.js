@@ -8,7 +8,7 @@ const { Videogame, Genre } = require('../db')
 const allvideogamesId = async(id) => {
 
     
-    if (id.length<5) {
+    if (id.length<7) {
       const URL = `https://api.rawg.io/api/games/${id}?key=${API_KEY}`;
   
       const response = await axios.get(URL);
