@@ -118,8 +118,8 @@ return (
             <select className={style.gen} onChange={event => handleFilterByGenres(event)} defaultValue='default'>
             <option value='default' disabled>Select by Genre</option>
             {
-                genres.map(gen => (
-                    <option value={gen.name} key={gen.id}>{gen.name}</option>
+                genres?.map((gen, index) => (
+                    <option value={gen.name} key={index}>{gen.name}</option>
                     
                     ))
                 }
