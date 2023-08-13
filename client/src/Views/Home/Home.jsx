@@ -113,7 +113,7 @@ return (
             
             
 
-            {/* <div className={style.gencon}>
+            <div className={style.gencon}>
 
             <select className={style.gen} onChange={event => handleFilterByGenres(event)} defaultValue='default'>
             <option value='default' disabled>Select by Genre</option>
@@ -124,7 +124,7 @@ return (
                     ))
                 }
             </select>
-            </div> */}
+            </div>
 
             <div>
                 <select className={style.apidb} onChange={handleCreateapi}> Created and Api
