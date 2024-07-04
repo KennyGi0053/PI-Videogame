@@ -9,7 +9,7 @@ const Card = (props) => {
 
         <div className={style.card}>
             <p className={style.name}>{props.name}</p>
-            <Link to={`/detail/${id}`}>
+            <Link to={`/detail/${id}`} >
             <img className= {style.image}src={props.image} alt="" />
             </Link>
             <p className={style.genre}>Genres: {props.genres}</p>

@@ -4,8 +4,8 @@ import { Detail, Form, Home, Landing } from './Views';
 import  NavBar  from './Components/NavBar/NavBar'
 import axios from 'axios';
 
-//axios.defaults.baseURL = 'http://localhost:3001/'
-axios.defaults.baseURL = 'https://pi-videogame-production-4cef.up.railway.app'
+axios.defaults.baseURL = 'http://localhost:3001/'
+//axios.defaults.baseURL = 'https://pi-videogame-production-4cef.up.railway.app'
 function App() {
 
   const location = useLocation()
